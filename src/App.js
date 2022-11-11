@@ -20,6 +20,7 @@ function App() {
 		try {
 			const url = `https://back-trackersy.onrender.com/auth/login/success`;
 			const { data } = await axios.get(url, { withCredentials: true });
+			console.log(data.user._json);
 			setUser(data.user._json);
 		} catch (err) {
 			console.log(err);
