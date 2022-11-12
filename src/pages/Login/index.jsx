@@ -9,6 +9,13 @@ function Login() {
 			"_self"
 		);
 	};
+	const getD= async()=>{
+		var response= await fetch("https://back-trackersy.onrender.com/api/investtable");
+		console.log(response);
+	}
+	React.useEffect(()=>{
+		getD();
+	})
 	return (
 		
 		<div className={styles.bgm}>
